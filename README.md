@@ -12,6 +12,32 @@ The prototype was developed for the **ABB Accelerator 2026 — Theme 1: Agentic 
 
 ---
 
+## Live Demo
+
+**Public Demo:**  
+https://mainten-route-ai.vercel.app
+
+**Source Repository:**  
+https://github.com/kwyo1201/MaintenRoute-AI
+
+The public deployment uses:
+
+```text
+User Browser
+   ↓
+Vercel — Next.js Frontend
+   ↓
+Next.js Server-Side /api/* Proxy
+   ↓
+Render — FastAPI Backend
+   ↓
+XGBoost + Risk-Aware Planning + A* + Model Ops
+```
+
+The public demo and the local Docker workflow use the same application logic and frozen deployment model.
+
+---
+
 ## Quick Start
 
 ### Prerequisites
@@ -534,6 +560,26 @@ flowchart TB
 
 ---
 
+## Public Deployment
+
+The project is also deployed as a public web prototype.
+
+| Component | Platform | Public URL |
+|---|---|---|
+| Next.js frontend | Vercel | `https://mainten-route-ai.vercel.app` |
+| FastAPI backend | Render | `https://maintenroute-ai.onrender.com` |
+| Source repository | GitHub | `https://github.com/kwyo1201/MaintenRoute-AI` |
+
+Production frontend requests are routed through the Next.js server-side API proxy using:
+
+```text
+FASTAPI_URL=https://maintenroute-ai.onrender.com
+```
+
+This keeps the browser-facing application on Vercel while the Python inference, planning, and Model Ops services run on Render.
+
+---
+
 ## User Interface
 
 ### Overview
@@ -607,13 +653,20 @@ FastAPI provides the main application endpoints, including:
 | `POST` | `/explain` | Local feature-sensitivity analysis |
 | `GET/POST` | model-ops endpoints | Dataset/model experiment operations |
 
-Interactive API documentation:
+Interactive API documentation for local execution:
 
 ```text
 http://localhost:8000/docs
 ```
 
+Public backend service:
+
+```text
+https://maintenroute-ai.onrender.com
+```
+
 ---
+
 
 ## Project Structure
 
@@ -900,12 +953,24 @@ A production-oriented version could add:
 
 ---
 
-## Repository
+## Links
 
-GitHub:
+Live Demo:
+
+```text
+https://mainten-route-ai.vercel.app
+```
+
+GitHub Repository:
 
 ```text
 https://github.com/kwyo1201/MaintenRoute-AI
+```
+
+Backend API:
+
+```text
+https://maintenroute-ai.onrender.com
 ```
 
 Clone:
