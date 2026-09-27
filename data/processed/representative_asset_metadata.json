@@ -1,0 +1,18 @@
+{
+  "sampling_source": "Held-out AI4I test set",
+  "sampling_method": "Fixed-seed random sampling within predefined risk bands",
+  "random_seed": 42,
+  "risk_bands": {
+    "CRITICAL": "0.80 <= probability <= 1.00",
+    "HIGH": "0.60 <= probability < 0.80",
+    "MEDIUM": "0.40 <= probability < 0.60",
+    "LOW": "0.00 <= probability < 0.40"
+  },
+  "requested_samples_per_band": {
+    "CRITICAL": 2,
+    "HIGH": 2,
+    "MEDIUM": 2,
+    "LOW": 4
+  },
+  "prediction_values_manually_assigned": false
+}

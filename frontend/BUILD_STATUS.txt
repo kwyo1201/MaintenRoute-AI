@@ -1,0 +1,2 @@
+Backend Python syntax: OK
+Frontend generated. Run npm.cmd install / npm.cmd run build locally or docker compose up --build.

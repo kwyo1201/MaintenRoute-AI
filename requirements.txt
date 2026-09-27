@@ -1,0 +1,15 @@
+fastapi==0.141.1
+joblib==1.6.0
+mlflow==3.16.1
+numpy==2.4.6
+pandas==3.0.5
+python-multipart==0.0.32
+plotly==7.0.0
+pydantic==2.13.5
+requests==2.34.2
+scikit-learn==1.9.1
+scipy==1.17.1
+starlette==1.6.0
+streamlit==1.63.0
+uvicorn==0.52.4
+xgboost==3.2.0

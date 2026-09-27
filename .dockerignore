@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+.ipynb_checkpoints/
+mlruns/
+mlflow_artifacts/
+mlflow.db
+runtime/
+*.log
+.env
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+
+# Frontend is built by its own Docker context.
+frontend/node_modules/
+frontend/.next/
